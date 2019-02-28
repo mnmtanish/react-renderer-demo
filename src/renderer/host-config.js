@@ -11,9 +11,7 @@ export default {
     createInstance(_type, props, stage) {
         const { render, ...data } = props;
         const shape = new Shape();
-        if (render) {
-            render(shape, data);
-        }
+        render(shape.graphics);
         return { shape, render, data };
     },
 
@@ -21,7 +19,7 @@ export default {
      * Applies a change to an instance.
      */
     commitUpdate(instance, payload, type, oldProps, newProps) {
-        newProps.render(instance.shape);
+        newProps.render(instance.shape.graphics);
         instance.shape.stage.update();
     },
 
