@@ -1,9 +1,9 @@
 import { Shape } from '@createjs/easeljs';
 
 /**
- * Source: https://gist.github.com/prometheansacrifice/43f93bffa5499888a88684100543518f#file-render-v1-js
+ * HostConfig for EaselJS Renderer
+ * based on: https://git.io/fhNyH
  */
-
 export default {
     /**
      * Create a new "instance" of your Element.
